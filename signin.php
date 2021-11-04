@@ -36,7 +36,7 @@
     </a>
   </div>
 </nav>
-<div class="container">
+<div class="container" style="padding:55px">
 <h1 style="text-align: center;"><?php echo $m;?></h1>
 <form method="POST" action="signin.php" class="row g-3">
   <div class="mb-3">
@@ -73,6 +73,7 @@
   </div>
 </form>
 <p>Already have account? <a href="login.php">Log In</a></p>
+<p style="color:blue">Check Your Postal Code: <a href="https://postal-codes.net/Bangladesh_postcodes/Dhaka_Postal_codes.html?fbclid=IwAR12eevmRAE76hq7bIAvZ10nmhyTvCF6XQH-foSyQfK_enRiMrqchpW5o80">Postal Code</a></p>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>

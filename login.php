@@ -16,7 +16,7 @@
           $user=mysqli_fetch_assoc($log);
           $_SESSION['user']=$user['name'];
           $_SESSION['userid']=$user['id'];
-            header('Location: profile.php');
+            header('Location: home.php');
         }else{
             $m='UserName or Password Mismatched!';
         }
@@ -34,14 +34,14 @@
   <body style="background-color:green">
 <nav class="navbar navbar-dark bg-success">
   <div class="container-fluid">
-    <a class="navbar-brand" href="home.php">
+    <a class="navbar-brand" href="index.php">
     eRecycle
     </a>
   </div>
 </nav>
 <div class="container">
 <h1 style="text-align: center;"><?php echo $m;?></h1>
-<form method="POST" action="login.php">
+<form method="POST" action="login.php" style="padding:55px">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
