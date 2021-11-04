@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <title>PostBook</title>
+    <title>eRecycle</title>
   </head>
   <body style="background-color:green">
   <nav class="navbar navbar-expand-lg navbar-light bg-success">
@@ -16,7 +16,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Login As User</a>
+          <a class="nav-link" href="login.php">Login As User</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Login As Agent</a>
@@ -41,7 +41,7 @@
   </div>
 </nav>
 <!-- end navbar -->
-<div class="card text-white bg-success mb-3" style="max-width: 540px;">
+<div class="card text-white bg-success mb-3" style="max-width: 840px; max-height: 280px; margin: 0 auto;">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="img/img.png" class="img-fluid rounded-start" alt="...">
@@ -57,14 +57,16 @@ it can be recycled.</p>
       </div>
     </div>
   </div>
-</div>
-<!-- end card -->
-<div style="padding: 10px;" class="text-center">
+<div class="d-grid gap-2 d-md-block">
+<div class="float-end" style="padding:15px">
 <a href="signin.php">
   <button class="btn btn-info" type="button">User Sing In</button></a>
 <a href="">  
    <button class="btn btn-dark" type="button">Agent Sign In</button></a>
 </div>
+</div>
+</div>
+<!-- end card -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   </body>
 </html>

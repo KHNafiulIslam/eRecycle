@@ -26,19 +26,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <title>PostBook</title>
+    <title>eRecycle</title>
   </head>
   <body style="background-color:green">
 <nav class="navbar navbar-dark bg-success">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php">
-      PostBook
+      eRecycle
     </a>
   </div>
 </nav>
 <div class="container">
 <h1 style="text-align: center;"><?php echo $m;?></h1>
-<form method="POST" action="signin.php">
+<form method="POST" action="signin.php" class="row g-3">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Full Name</label>
     <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
@@ -48,11 +48,11 @@
     <label for="exampleInputEmail1" class="form-label">Email address</label>
     <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
   </div>
-  <div class="mb-3">
+  <div class="col-md-6">
     <label for="exampleInputEmail1" class="form-label">Location</label>
     <input type="text" name="location" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
   </div>
-  <div class="mb-3">
+  <div class="col-md-6">
     <label for="exampleInputEmail1" class="form-label">Postal Code</label>
     <input type="number" name="postal" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
   </div>
@@ -68,7 +68,9 @@
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
+  <div class="col-12">
   <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+  </div>
 </form>
 <p>Already have account? <a href="login.php">Log In</a></p>
 </div>
