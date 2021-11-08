@@ -27,7 +27,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Current Price of Materials</a></li>
-            <li><a class="dropdown-item" href="#">Agent on different Location</a></li>
+            <li><a class="dropdown-item" href="#">Agent on different Locations</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Waste Collection History</a></li>
           </ul>
