@@ -60,7 +60,7 @@ it can be recycled.</p>
 <div class="d-grid gap-2 d-md-block">
 <div class="float-end" style="padding:15px">
 <a href="signin.php">
-  <button class="btn btn-info" type="button">User Sing In</button></a>
+  <button class="btn btn-info" type="button">User Sign In</button></a>
 <a href="">  
    <button class="btn btn-dark" type="button">Agent Sign In</button></a>
 </div>
