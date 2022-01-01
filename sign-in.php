@@ -130,7 +130,7 @@ a {
         <div class="col-md-8 col-12 xcol">
         <h1 style="text-align: center;"><?php echo $m;?></h1>
             <h2 class="title pt-4" >Sign Up</h2>
-            <form method="POST" action="signin.php" class="row g-3">
+            <form method="POST" action="signin.php" class="row ">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Full Name</label>
     <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
@@ -156,18 +156,15 @@ a {
     <label for="exampleInputPassword1" class="form-label">Password</label>
     <input type="password" name="password" class="form-control" id="exampleInputPassword1" require>
   </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
+ 
   <div class="col-12">
-  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="submit" class="btn btn-primary"> Create account</button>
   </div>
 </form>
         </div>
     </div>
-<p>Already have account? <a href="log-in.php">Log In</a></p>
-<p style="color:blue">Check Your Postal Code: <a href="https://postal-codes.net/Bangladesh_postcodes/Dhaka_Postal_codes.html?fbclid=IwAR12eevmRAE76hq7bIAvZ10nmhyTvCF6XQH-foSyQfK_enRiMrqchpW5o80">Postal Code</a></p>
+<p>Already have account? <a href="log-in.php" style="color: #00d49f">Log in</a></p>
+<p>Check Your Postal Code: <a style="color: #00d49f" href="https://postal-codes.net/Bangladesh_postcodes/Dhaka_Postal_codes.html?fbclid=IwAR12eevmRAE76hq7bIAvZ10nmhyTvCF6XQH-foSyQfK_enRiMrqchpW5o80">Postal Code</a></p>
 
 </div>
 
