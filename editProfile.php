@@ -111,7 +111,7 @@
                                                 <label for="npass" class="form-label">New Password</label>
                                             </div>
                                             <div class="col-sm-8">
-                                                <input name="npass" class="form-control" type="password" id="npass" >
+                                                <input name="npass" class="form-control" type="password" id="npass" required>
                                             </div>
                                         </div>
                                         <div class="form-group pt-20">
@@ -119,7 +119,7 @@
                                                 <label for="cpass" class="form-label">Confirm New Password</label>
                                             </div>
                                             <div class="col-sm-8">
-                                                <input name="cpass" class="form-control" type="password" id="cpass" >
+                                                <input name="cpass" class="form-control" type="password" id="cpass" required>
                                             </div>
                                         </div>
                                         <button style="margin: 10px 0px;" type="submit" value="submit" name="submit" class="btn btn-primary">Change</button>

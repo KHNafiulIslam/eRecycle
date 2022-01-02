@@ -10,10 +10,12 @@
   $thisUser= mysqli_fetch_assoc($conn->query($sq));
 
   if(isset($_POST['submit'])){
-    $title= $_POST['title'];
-    $body= $_POST['body'];
+    $item= $_POST['item'];
+    $weight= $_POST['weight'];
+    $details= $_POST['details'];
+    $contact= $_POST['contact'];
     $author= $_POST['author'];
-    $sql= "INSERT INTO post(title, body, author) VALUES ('$title', '$body', '$author')";
+    $sql= "INSERT INTO post(item,weight,details,contact, author) VALUES ('$item', '$weight','$details','$contact', '$author')";
           if($conn->query($sql)===true){
             header('Location:profile.php');
               $m= "Posted";
@@ -46,15 +48,19 @@
 <form method="POST" action="home.php" style="padding:55px" class="row g-3">
 <div class="col-md-6">
   <label for="exampleFormControlInput1" class="form-label">Wastage Item</label>
-  <input type="text" name="title" class="form-control" id="exampleFormControlInput1" require>
+  <input type="text" name="item" class="form-control" id="exampleFormControlInput1" require>
 </div>
 <div class="col-md-6">
   <label for="exampleFormControlInput1" class="form-label">Approximate Weight</label>
-  <input type="number" name="title" class="form-control" id="exampleFormControlInput1" require>
+  <input type="number" name="weight" class="form-control" id="exampleFormControlInput1" require>
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Wastage Details</label>
-  <textarea type="text" name="body" class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+  <textarea type="text" name="details" class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Contact Number</label>
+  <input type="number" name="contact" class="form-control" id="exampleFormControlTextarea1" required></input>
 </div>
 <div class="mb-3">
   <input type="hidden" name="author" value="<?php echo $thisUser['name'];?>" class="form-control" id="exampleFormControlTextarea1" required></input>

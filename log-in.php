@@ -84,21 +84,21 @@
       <form method="POST" action="log-in.php" style="padding:55px">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1" require>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1" require>
   </div>
   <div class="mb-3 form-check">
     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
-  <button type="submit" name="submit" class=" w-45 btn btn-primary">Log in</button>
+  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 </form>
       </div>
     </div>
-    <p>Lets Create account? <a href="sign-in.php" style="color: #00d49f ">Sign Up</a></p>
+    <p>Lets Create account? <a href="sign-in.php">Sign Up</a></p>
 
   </div>
 

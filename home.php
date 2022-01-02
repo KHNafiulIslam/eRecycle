@@ -11,10 +11,12 @@
   $sql = "SELECT * FROM post ORDER BY id DESC";
   $post=$conn->query($sql);
   if(isset($_POST['submit'])){
-    $title= $_POST['title'];
-    $body= $_POST['body'];
+    $item= $_POST['item'];
+    $weight= $_POST['weight'];
+    $details= $_POST['details'];
+    $contact= $_POST['contact'];
     $author= $_POST['author'];
-    $sql= "INSERT INTO post(title, body, author) VALUES ('$title', '$body', '$author')";
+    $sql= "INSERT INTO post(item,weight,details,contact, author) VALUES ('$item', '$weight','$details','$contact', '$author')";
           if($conn->query($sql)===true){
             header('Location:home.php');
               $m= "Posted";
@@ -34,18 +36,22 @@
   <div style="padding:40px;" class="container">
 <h3><?php echo $m;?></h3>
 <h5>Post Your Wastage Amount</h5>
-<form method="POST" action="home.php" style="padding:55px" class="row g-3">
+<form method="POST" action="home.php" style="padding:50px" class="row g-3">
 <div class="col-md-6">
   <label for="exampleFormControlInput1" class="form-label">Wastage Item</label>
-  <input type="text" name="title" class="form-control" id="exampleFormControlInput1" require>
+  <input type="text" name="item" class="form-control" id="exampleFormControlInput1" require>
 </div>
 <div class="col-md-6">
   <label for="exampleFormControlInput1" class="form-label">Approximate Weight</label>
-  <input type="number" name="title" class="form-control" id="exampleFormControlInput1" require>
+  <input type="number" name="weight" class="form-control" id="exampleFormControlInput1" require>
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Wastage Details</label>
-  <textarea type="text" name="body" class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+  <textarea type="text" name="details" class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Contact Number</label>
+  <input type="number" name="contact" class="form-control" id="exampleFormControlTextarea1" required></input>
 </div>
 <div class="mb-3">
   <input type="hidden" name="author" value="<?php echo $thisUser['name'];?>" class="form-control" id="exampleFormControlTextarea1" required></input>
@@ -60,10 +66,17 @@
      while($row= mysqli_fetch_assoc($post)){
       echo "<div class='container'>";
       echo "<h4>";
-      echo $row['title'];
+      echo $row['item'];
       echo "</h4>";
       echo "<h6>";
-      echo $row['body'];
+      echo "Approximate Weight: ";
+      echo $row['weight'];
+      echo "</h6>";
+      echo "<p>";
+      echo $row['details'];
+      echo "</p>";
+      echo "<h6>";
+      echo $row['contact'];
       echo "</h6>";
       echo "<p>Posted By ".$row['author']."</p>";
       if($row['author']===$thisUser['name']){
