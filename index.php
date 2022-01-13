@@ -1,72 +1,146 @@
+
 <!doctype html>
 <html lang="en">
   <head>
+
+
+    <!-- Bootstrap core CSS -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <title>eRecycle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+
+<link rel="manifest" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/manifest.json">
+
+<meta name="theme-color" content="#7952b3">
+
+
+<style>
+ 
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .btn-primary,.btn-primary:hover,.btn-primary:active,.btn-primary:visited,.btn-primary:focus {
+    background-color: #00d49f !important;
+    border-color: #00d49f;
+
+    
+    </style>
+
+<link href="css/carousel.css" rel="stylesheet">
+
+
   </head>
-  <body style="background-color:green">
-  <nav class="navbar navbar-expand-lg navbar-light bg-success">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">eRecycle</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="log-in.php">Login As User</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Login As Agent</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Services
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Current Price of Materials</a></li>
-            <li><a class="dropdown-item" href="#">Agent on different Location</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Waste Collection History</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+  
+
+
+  <body>
+
+  <header>
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">  eRecycle</a> 
+   <!-- <a class="navbar-brand" href="#"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="" width="36" height="30" >  eRecycle</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Our Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Locations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Prices</a>
+          </li>
+        </ul>
+        <div class="col-md-3 text-end">
+        <a class="btn btn-primary text-white" href="log-in.php" role="button">Login as user</a>
+        <a class="btn btn-info text-white" href="#" role="button">Login as agent</a>
+       
+        
+      </div>
+      </div>
     </div>
+  </nav>
+
+  
+</header>
+
+<main>
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-</nav>
-<!-- end navbar -->
-<div class="card text-white bg-success mb-3" style="max-width: 840px; max-height: 280px; margin: 0 auto;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="img/img.png" class="img-fluid rounded-start" alt="...">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">eRecycle</h5>
-        <p class="card-text">Despite the fact that recycling is the most cost-effective and environmentally benign way
-to reduce the country’s massive plastic waste, recycling programs in Bangladesh are still in
-their infancy. More often than not, people simply leave the plastic garbage in open areas,
-along the roadside, in rivers, or on the seashore, rather than properly disposing of it so that
-it can be recycled.</p>
+    <div class="carousel-item">
+      <img src="img/2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
   </div>
-<div class="d-grid gap-2 d-md-block">
-<div class="float-end" style="padding:15px">
-<a href="sign-in.php">
-  <button class="btn btn-info" type="button">User Sing In</button></a>
-<a href="">  
-   <button class="btn btn-dark" type="button">Agent Sign In</button></a>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
-</div>
-</div>
-<!-- end card -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a style="color: #00d49f " href="#">Back to top</a></p>
+    <p>&copy; 2022– eRecycle, Inc. &middot; <a style="color: #00d49f " href="#">Privacy</a> &middot; <a style="color: #00d49f " href="#">Terms</a></p>
+  </footer>
+</main>
+    
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      
   </body>
 </html>

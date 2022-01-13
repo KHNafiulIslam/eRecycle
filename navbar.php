@@ -17,7 +17,7 @@ if(!$_SESSION['userid'])
     <title>eRecycle</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="home.php">eRecycle</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,11 +36,11 @@ if(!$_SESSION['userid'])
         </li>
       </ul>
       <li class="d-flex">
-      <li style="color: white;font-size:large" class="nav-link">
+      <li  class="nav-link text-muted">
       <b>  <?php echo $user;?> </b>
       </li>
         <a href="logout.php">
-        <button class="btn btn-outline-danger" type="submit">LogOut</button></a>
+        <button class="btn btn-danger" type="submit">LogOut</button></a>
       </li>
     </div>
   </div>
