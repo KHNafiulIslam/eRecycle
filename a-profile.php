@@ -3,24 +3,12 @@
   session_start();
   $conn = connect();
   $m="";
-  include ('navbar.php');
+  include ('a-navbar.php');
   $user= $_SESSION['user'];
   $id= $_SESSION['userid'];
-  $sq= "SELECT * FROM users WHERE id='$id'";
+  $sq= "SELECT * FROM agent WHERE id='$id'";
   $thisUser= mysqli_fetch_assoc($conn->query($sq));
 
-  if(isset($_POST['submit'])){
-    $item= $_POST['item'];
-    $weight= $_POST['weight'];
-    $details= $_POST['details'];
-    $contact= $_POST['contact'];
-    $author= $_POST['author'];
-    $sql= "INSERT INTO post(item,weight,details,contact, author) VALUES ('$item', '$weight','$details','$contact', '$author')";
-          if($conn->query($sql)===true){
-            header('Location:profile.php');
-              $m= "Posted";
-          }
-  }
 ?>
 <!doctype html>
 <html lang="en">
@@ -83,7 +71,7 @@ body{
 								<img src="https://www.bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
 								<div class="mt-3">
 									<h4><?php echo $thisUser['name'];?> </h4>
-									<p class="text-secondary mb-1"><?php echo $thisUser['job'];?></p>
+									<p class="text-secondary mb-1"><?php echo "<b>".$thisUser['number']."</b>";?></p>
 									<p class="text-muted font-size-sm"><?php echo $thisUser['location'];?></p>
 									<!--<button class="btn btn-primary">Follow</button>
 									<button class="btn btn-outline-primary">Message</button> -->
@@ -132,7 +120,7 @@ body{
 									<h6 class="mb-0">Email:</h6>
 								</div>
 								<div class="col-sm-9">
-                                <p><?php echo $thisUser['email'];?></p>
+                                <p><?php echo $thisUser['number'];?></p>
 								</div>
 							</div>
 							<div class="row mb-3">
@@ -151,19 +139,10 @@ body{
                                 <p><?php echo $thisUser['postal'];?></p>
 								</div>
 							</div>
-							<div class="row mb-3">
-								<div class="col-sm-3">
-									<h6 class="mb-0">Joined:</h6>
-								</div>
-								<div class="col-sm-9">
-                                <p><?php echo $thisUser['created'];?></p>
-								</div>
-							</div>
-                            
 							<div class="row">
 								<div class="col-sm-3"></div>
 								<div class="col-sm-9 text-secondary">
-                                   <a href="editProfile.php" class="btn btn-primary px-2">Edit Profile</a>
+                                   <a href="a-editProfile.php" class="btn btn-primary px-2">Edit Profile</a>
 									
 								</div>
 							</div>
@@ -174,31 +153,6 @@ body{
 							<div class="card">
 								<div class="card-body">
 
-<form method="POST" action="home.php" style="padding:55px" class="row g-3">
-<div class="col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">Wastage Item</label>
-  <input type="text" name="item" class="form-control" id="exampleFormControlInput1" require>
-</div>
-<div class="col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">Approximate Weight</label>
-  <input type="number" name="weight" class="form-control" id="exampleFormControlInput1" require>
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Wastage Details</label>
-  <textarea type="text" name="details" class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Contact Number</label>
-  <input type="number" name="contact" class="form-control" id="exampleFormControlTextarea1" required></input>
-</div>
-<div class="mb-3">
-  <input type="hidden" name="author" value="<?php echo $thisUser['name'];?>" class="form-control" id="exampleFormControlTextarea1" required></input>
-</div>
-<div class="col-12">
-<button type="submit" value="submit" class="btn btn-success" name="submit">Post</button>
-</div>
-</div>
-</form>
 								</div>
 							</div>
 						</div> 

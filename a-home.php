@@ -3,25 +3,14 @@
   session_start();
   $m="";
   $conn = connect();
-  include ('navbar.php');
+  include ('a-navbar.php');
   $id= $_SESSION['userid'];
   $sq= "SELECT * FROM users WHERE id='$id'";
   $thisUser= mysqli_fetch_assoc($conn->query($sq));
   
   $sql = "SELECT * FROM post ORDER BY id DESC";
   $post=$conn->query($sql);
-  if(isset($_POST['submit'])){
-    $item= $_POST['item'];
-    $weight= $_POST['weight'];
-    $details= $_POST['details'];
-    $contact= $_POST['contact'];
-    $author= $_POST['author'];
-    $sql= "INSERT INTO post(item,weight,details,contact, author) VALUES ('$item', '$weight','$details','$contact', '$author')";
-          if($conn->query($sql)===true){
-            header('Location:home.php');
-              $m= "Posted";
-          }
-  }
+  
 ?>
 
 <!doctype html>
@@ -153,35 +142,9 @@ body{
     <div class="col-md-6 col-xs-12 col-md-offset-3">
       <div class="panel">
         <div class="panel-heading">
-          <h3 class="panel-title">Post</h3>
+          <h3 class="panel-title">Posts</h3>
         </div>
         <div class="panel-body">
-            <!-- form start -->
-            <form method="POST" action="home.php" style="padding:50px" class="row g-3">
-<div class="col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">Wastage Item</label>
-  <input type="text" name="item" class="form-control" id="exampleFormControlInput1" require>
-</div>
-<div class="col-md-6">
-  <label for="exampleFormControlInput1" class="form-label">Approximate Weight</label>
-  <input type="number" name="weight" class="form-control" id="exampleFormControlInput1" require>
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Wastage Details</label>
-  <textarea type="text" name="details" class="form-control" id="exampleFormControlTextarea1" rows="2" required></textarea>
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Contact Number</label>
-  <input type="number" name="contact" class="form-control" id="exampleFormControlTextarea1" required></input>
-</div>
-<div class="mb-3">
-  <input type="hidden" name="author" value="<?php echo $thisUser['name'];?>" class="form-control" id="exampleFormControlTextarea1" required></input>
-</div>
-<div class="col-12">
-<button type="submit" value="submit" class="btn btn-success" name="submit">Post</button>
-</div>
-</div>
-</form>
           <ul class="list-group list-group-dividered list-group-full">
             <li class="list-group-item">
               <div class="media">
@@ -211,10 +174,6 @@ body{
       echo "<h6>";
       echo $row['contact'];
       echo "</h6>";
-      if($row['author']===$thisUser['name']){
-        echo "<a href='editPost.php?id=".$row['id']."'><button style='margin: 0px 50px;' class='btn btn-primary'>Edit</button></a>";
-        echo "<a href='deletePost.php?id=".$row['id']."'><button style='margin: 0px 50px;' class='btn btn-danger'>Delete</button></a>";
-       }
       echo "</div>";
       echo "<hr class='margin-bottom-10'>";  
     }
